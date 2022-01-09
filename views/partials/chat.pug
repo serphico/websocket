@@ -1,0 +1,14 @@
+div(style='background-color:#f4f4f4; padding: 5%;')
+    h1 Centro de Mensajes
+    form(onsubmit="return addMessage(this)")
+        div(class="mb-3 col-3" )
+            label(for="mail" class="form-label") Email
+            input(type="email" id="mail" class="form-control" required) 
+    
+        div(id="allChat")
+
+        
+        div(class="mb-3 col-3")
+            input(type="text" id="mensaje" class="form-control")
+            input(class="btn btn-primary btn-sm" type="submit", id="enviar", value="Enviar")
+

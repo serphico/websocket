@@ -1,0 +1,29 @@
+doctype html
+
+html(style={margin: '5%'})
+  include ../partials/head.pug
+  body
+    div(style='background-color:#f4f4f4; padding: 5%;')
+      h1 Formulario de Ingreso de productos
+      form(onsubmit="return addProduct(this)")
+        div(class="mb-3")
+          label(for="title" class="form-label") Nombre del Producto
+          input(type="text" class="form-control" id="title" placeholder="Nombre del Producto" required)
+
+        div(class="mb-3")
+          label(for="price" class="form-label") Precio
+          input(type="number" class="form-control" id="price" placeholder="Precio del Producto" required)
+
+        div(class="mb-3")
+
+          label(for="thumbnail" class="form-label") Foto URL
+          input(type="text" class="form-control" id="thumbnail" placeholder="Foto del Producto")
+
+        input(class="btn btn-primary", type="submit", value="Submit")
+    
+      div(id="contenedorTable" style="background-color: #072f5c; color: white;")
+    br
+    include ../partials/chat.pug
+
+    script(src= "../js/index.js") 
+
